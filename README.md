@@ -42,22 +42,14 @@ Ensure you have Tesseract-OCR and the necessary language data installed for `pyt
 
 ### Preparing Your Dataset
 
-1. **Extract Text from PDFs**: Convert your PDF resumes into text for analysis.
-
-   ```bash
-   python pdf_data_extraction.py --pdf_path /path/to/your/pdf
-   ```
-
-2. **Structure Resume Data**: Analyse and categorise the extracted text into structured data.
-
-3. **Generate Q&A Pairs**: Create a dataset of question-answer pairs based on the structured data. You have to install [ollama](https://ollama.com/) to generate the training dataset.
+1. **Generate Q&A Pairs**: Create a dataset of question-answer pairs based on the structured data. You have to install [ollama](https://ollama.com/) to generate the training dataset. Don't forget to modify the path of your UK Resume in `generate_training_dataset.py`.
 
    ```bash
    ollama run mistral
    python generate_training_dataset.py --pdf_path /path/to/your/resume.pdf --output /path/to/output.jsonl
    ```
 
-4. **Prepare Training and Validation Sets**: Shuffle and split the generated dataset into training and validation sets.
+2. **Prepare Training and Validation Sets**: Shuffle and split the generated dataset into training and validation sets.
 
    ```bash
    python split_training_dataset.py
