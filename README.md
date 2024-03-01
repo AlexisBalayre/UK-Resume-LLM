@@ -2,6 +2,8 @@
 
 Resume Insight is a sophisticated project designed to harness the power of large language models (LLMs) for deep analysis and understanding of resume data. It seamlessly blends technologies like OCR, natural language processing (NLP), and machine learning (ML) to extract, structure, and generate insightful question-answer pairs from resumes. This data then serves as a foundation for fine-tuning an LLM, aiming to produce a model adept at generating nuanced, context-aware responses based on resume content.
 
+<img width="1512" alt="Screenshot 2024-02-29 at 23 14 56" src="https://github.com/AlexisBalayre/UK-Resume-LLM/assets/60859013/b76ec149-3792-4307-8153-f6d80c20771a">
+
 ## Key Features
 
 - **Comprehensive Data Extraction**: Utilises OCR to transform PDF resumes into analysable text.
@@ -94,9 +96,6 @@ This script will train the model on your custom dataset, leveraging the previous
    ollama create your-model-name -f Modelfile
    ollama run your-model-name
    ```
-
-<img width="1512" alt="Screenshot 2024-02-29 at 23 14 56" src="https://github.com/AlexisBalayre/UK-Resume-LLM/assets/60859013/b76ec149-3792-4307-8153-f6d80c20771a">
-
 
 ## Customization
 
