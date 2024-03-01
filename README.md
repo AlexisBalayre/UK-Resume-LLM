@@ -46,7 +46,7 @@ Ensure you have Tesseract-OCR and the necessary language data installed for `pyt
 
    ```bash
    ollama run mistral
-   python generate_training_dataset.py --pdf_path /path/to/your/resume.pdf --output /path/to/output.jsonl
+   python generate_training_dataset.py 
    ```
 
 2. **Prepare Training and Validation Sets**: Shuffle and split the generated dataset into training and validation sets.
