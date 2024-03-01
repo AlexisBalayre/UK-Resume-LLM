@@ -4,10 +4,10 @@ Resume Insight is a sophisticated project designed to harness the power of large
 
 ## Key Features
 
-- **Comprehensive Data Extraction**: Utilizes OCR to transform PDF resumes into analyzable text.
-- **Intelligent Data Structuring**: Applies NLP techniques to categorize and structure resume text into meaningful data points.
+- **Comprehensive Data Extraction**: Utilises OCR to transform PDF resumes into analysable text.
+- **Intelligent Data Structuring**: Applies NLP techniques to categorise and structure resume text into meaningful data points.
 - **Dynamic Dataset Creation**: Generates a rich dataset of question-answer pairs tailored for LLM training, focusing on resume insights.
-- **Advanced Model Fine-Tuning**: Employs cutting-edge fine-tuning strategies, including memory optimization and parameter-efficient fine-tuning (PEFT), to enhance an LLM's capability in generating contextually relevant text.
+- **Advanced Model Fine-Tuning**: Employs cutting-edge fine-tuning strategies, including memory optimisation and parameter-efficient fine-tuning (PEFT), to enhance an LLM's capability in generating contextually relevant text.
 
 ## Getting Started
 
@@ -18,7 +18,7 @@ Resume Insight is a sophisticated project designed to harness the power of large
 - Hugging Face Transformers, Datasets
 - pdf2image, pytesseract for OCR
 - Spacy for NLP tasks
-- bitsandbytes for memory optimization
+- bitsandbytes for memory optimisation
 - Ollama to generate the training dataset
 
 ### Installation
@@ -46,7 +46,7 @@ Ensure you have Tesseract-OCR and the necessary language data installed for `pyt
    python pdf_data_extraction.py --pdf_path /path/to/your/pdf
    ```
 
-2. **Structure Resume Data**: Analyze and categorize the extracted text into structured data.
+2. **Structure Resume Data**: Analyse and categorise the extracted text into structured data.
 
 3. **Generate Q&A Pairs**: Create a dataset of question-answer pairs based on the structured data. You have to install [ollama](https://ollama.com/) to generate the training dataset.
 
@@ -71,7 +71,7 @@ python train_llm.py
 
 This script will train the model on your custom dataset, leveraging the previously generated question-answer pairs.
 
-## Converting and Quantizing the Model
+## Converting and Quantising the Model
 
 1. Clone the [llama.cpp](https://github.com/ggerganov/llama.cpp) repository and build the `llama` binary.
 
@@ -82,17 +82,17 @@ This script will train the model on your custom dataset, leveraging the previous
    python3 convert.py --vocab-type hfft /path/to/your/fine-tuned-model-directory
    ```
 
-3. Quantize the model to a lower precision:
+3. Quantise the model to a lower precision:
 
    ```bash
    ./quantize /path/to/your/fine-tuned-model-directory/ggml-model.gguf /path/to/your/fine-tuned-model-directory/ggml-model-Q4_K_M.gguf Q4_K_M
    ```
 
-4. Finally, you can test the quantized model using [ollama](https://ollama.com/), [LM Studio](https://lmstudio.ai/) or any other compatible tool. For exemple with `ollama`, modify the path to the quantized model in the `Modelfile` file and run the following command:
+4. Finally, you can test the quantised model using [ollama](https://ollama.com/), [LM Studio](https://lmstudio.ai/) or any other compatible tool. For exemple with `ollama`, modify the path to the quantised model in the `Modelfile` file and run the following command:
 
    ```bash
    ollama create your-model-name -f Modelfile
-   ollaam run your-model-name
+   ollama run your-model-name
    ```
 
 <img width="1512" alt="Screenshot 2024-02-29 at 23 14 56" src="https://github.com/AlexisBalayre/UK-Resume-LLM/assets/60859013/b76ec149-3792-4307-8153-f6d80c20771a">
@@ -103,7 +103,7 @@ This script will train the model on your custom dataset, leveraging the previous
 Feel free to adjust the scripts to better fit your needs. For example, you might want to:
 
 - Modify regular expressions in `uk_resume_data_extraction.py` for improved data extraction.
-- Tweak the training parameters in `train_llm.py` to optimize model performance.
+- Tweak the training parameters in `train_llm.py` to optimise model performance.
 
 ## Contributing
 
@@ -121,7 +121,7 @@ This project makes extensive use of the following libraries and frameworks:
 - [pdf2image](https://github.com/Belval/pdf2image) and [pytesseract](https://github.com/madmaze/pytesseract) for PDF text extraction.
 - [Spacy](https://spacy.io/) for advanced NLP processing.
 - [bitsandbytes](https://github.com/TimDettmers/bitsandbytes) for model memory optimization.
+- [Mistral Mastery: Fine-Tuning & Fast Inference Guide](https://medium.com/@parikshitsaikia1619/mistral-mastery-fine-tuning-fast-inference-guide-62e163198b06)
+- [Mistral-7B Fine-Tuning: A Step-by-Step Guide](https://gathnex.medium.com/mistral-7b-fine-tuning-a-step-by-step-guide-52122cdbeca8)
 
 Your feedback and contributions are highly appreciated as we aim to continuously improve and expand the capabilities of Resume Insight.
-
-./quantize /mnt/beegfs/home/s425500/llm-finetunning/merged_model/ggml-model-f16.gguf /mnt/beegfs/home/s425500/llm-finetunning/merged_model/ggml-model-Q4_K_M.gguf Q4_K_M
