@@ -95,6 +95,9 @@ This script will train the model on your custom dataset, leveraging the previous
    ollaam run your-model-name
    ```
 
+<img width="1512" alt="Screenshot 2024-02-29 at 23 14 56" src="https://github.com/AlexisBalayre/UK-Resume-LLM/assets/60859013/b76ec149-3792-4307-8153-f6d80c20771a">
+
+
 ## Customization
 
 Feel free to adjust the scripts to better fit your needs. For example, you might want to:
