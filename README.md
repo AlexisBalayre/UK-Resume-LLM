@@ -28,8 +28,8 @@ Resume Insight is a sophisticated project designed to harness the power of large
 First, clone this repository to your local machine:
 
 ```bash
-git clone https://your-repository-link.git
-cd your-repository-directory
+git clone https://AlexisBalayre/UK-Resume-LLM.git
+cd UK-Resume-LLM
 ```
 
 Install the required Python packages:
