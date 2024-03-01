@@ -1,0 +1,1 @@
+FROM /path/to/your/fine-tuned-model-directory/ggml-model-Q4_K_M.gguf
